@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="main-text">
+        <h1>Generate a <span>random password</span></h1>
+        <p>Never use an insecure password again.</p>
+    </div>
+    <div class="settings-container">
+        <div class="settings">
+            <label class="switch">
+                <input type="checkbox" id="symbols-checkbox">
+                <span class="slider round"></span>
+            </label>
+            <h4>Enable Symbols</h4>
+        </div>
+
+        <div class="settings">
+
+            <label class="switch">
+                <input type="checkbox" id="numbers-checkbox">
+                <span class="slider round"></span>
+            </label>
+            <h4>Enable Numbers</h4>
+        </div>
+
+        <button class="btn circle" onclick="increment()">+</button>
+        <input type="text" id="length-input" value="8" readonly>
+        <button class="btn circle" onclick="decrement()">-</button>
+
+    </div>
+
+    <button class="btn" onclick="generatePassword()">Generate Passwords</button>
+
+    <div class="password-container">
+        <div class="tooltip">
+
+            <button class="btn-password" onclick="copy(1)" id="password1"></button>
+            <span class="tooltiptext" id="firstToolTip">Copy to clipboard</span>
+        </div>
+        <div class="tooltip">
+
+            <button class="btn-password" onclick="copy(2)" id="password2"></button>
+            <span class="tooltiptext" id="secondToolTip">Copy to clipboard</span>
+        </div>
+
+
+        <script src="script.js"></script>
+</body>
+
+</html>
